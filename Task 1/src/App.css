@@ -1,0 +1,151 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.header {
+  position:fixed;
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ff6600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.header nav ul li {
+  margin: 0;
+}
+
+.header nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+  color: #ffffff;
+}
+
+.search-cart {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: #333;
+}
+.icon:hover,.logo h1:hover {
+  color: white;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  background-color: #fff1c3;
+  color: #333;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero h2 span {
+  color: #ff6600;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.order-btn, .video-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.order-btn {
+  background-color: #ff6600;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+  background-color: #cc5200;
+}
+
+.video-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.video-btn:hover {
+  background-color: #333;
+  color: white;
+}
+
+.play-icon {
+  font-size: 1.2rem;
+}
+
+.rating {
+  margin-top: 1.5rem;
+}
+
+.rating span {
+  font-size: 1.2rem;
+  color: #ffcc00;
+}
+
+.rating p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.hero-image img {
+ max-width: 960px;
+ max-height: 900px;
+ margin-right: 250px;
+}
