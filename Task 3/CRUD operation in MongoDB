@@ -1,0 +1,91 @@
+show dbs
+admin    40.00 KiB
+config  108.00 KiB
+local    40.00 KiB
+
+db.createCollection('classA')
+{ ok: 1 }
+show dbs
+admin    40.00 KiB
+config  108.00 KiB
+local    40.00 KiB
+test      8.00 KiB
+
+show collections
+classA
+
+db.classA.insertOne({'name':'Amrish','rollno':12})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6697e92b3a9b3d2c09e5e8db')
+}
+
+db.classA.find()
+{
+  _id: ObjectId('6697e92b3a9b3d2c09e5e8db'),
+  name: 'Amrish',
+  rollno: 12
+}
+
+db.classA.insertOne({'name':'AAA','rollno':13, 'phone':9089908990})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6697e9553a9b3d2c09e5e8dc')
+}
+
+db.classA.find()
+{
+  _id: ObjectId('6697e92b3a9b3d2c09e5e8db'),
+  name: 'Amrish',
+  rollno: 12
+}
+{
+  _id: ObjectId('6697e9553a9b3d2c09e5e8dc'),
+  name: 'AAA',
+  rollno: 13,
+  phone: 9089908990
+}
+
+db.classA.find({'rollno':12})
+{
+  _id: ObjectId('6697e92b3a9b3d2c09e5e8db'),
+  name: 'Amrish',
+  rollno: 12
+}
+
+db.classA.updateOne({'rollno':13},{$set:{'phone':9899788789}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+db.classA.find()
+{
+  _id: ObjectId('6697e92b3a9b3d2c09e5e8db'),
+  name: 'Amrish',
+  rollno: 12
+}
+{
+  _id: ObjectId('6697e9553a9b3d2c09e5e8dc'),
+  name: 'AAA',
+  rollno: 13,
+  phone: 9899788789
+}
+
+db.classA.deleteOne({'rollno':13})
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+
+db.classA.find()
+{
+  _id: ObjectId('6697e92b3a9b3d2c09e5e8db'),
+  name: 'Amrish',
+  rollno: 12
+}
+
+
