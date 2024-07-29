@@ -1,0 +1,179 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2; 
+}
+
+
+.form-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    width: 450px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.form-box h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.form-box label {
+    color: white;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+}
+
+.form-box input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.form-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-box input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border: none;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #9648e3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.form-box button:hover {
+    background: #483D8B;
+}
+
+.form-box p {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-box .link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.form-box .link:hover {
+    color: #efa865;
+}
+
+.alert {
+    background-color: #ffac64;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Ensure background from other pages is not altered */
+}
+
+.home-box {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white for contrast */
+    border-radius: 15px;
+    padding: 40px;
+    width: 400px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px); /* Subtle blur for modern look */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+.home-box h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #9648e3; /* Match your primary color */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: #483D8B; 
+}
+
+.home-box p {
+    text-align: center;
+    font-size: 1.1em;
+}
